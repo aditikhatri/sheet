@@ -14,3 +14,4 @@ public:
         return res;
     }
 };
+// we need to check max window made by of first/last k elements
