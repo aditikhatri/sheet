@@ -6,10 +6,10 @@ public:
         for(int i=0;i<n-k;i++){
             msum+=card[i];
         }
-        sum=temp=msum;
+        sum=temp=msum;//*keep msum in rhs
         for(int i=n-k;i<n;i++){
             sum+=card[i];
-            msum=min(msum,(temp-card[i-n+k]+card[i]));
+            msum=min(msum,(temp-card[i-n+k]+card[i])); // [1+2+3+4+]-1+5
             temp=(temp-card[i-n+k]+card[i]);
         }
         return sum-msum;
