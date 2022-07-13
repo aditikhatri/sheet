@@ -30,6 +30,8 @@ public:
             ans.push_back(level);
         }
         reverse(ans.begin(),ans.end());
+        // or else store answer of level from end of ans vector
+        //ans[n-1]=level and n--;
         return ans;
     }
 };
