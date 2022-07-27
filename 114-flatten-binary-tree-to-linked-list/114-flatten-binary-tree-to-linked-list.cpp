@@ -11,13 +11,28 @@
  */
 class Solution {
 public:
-    TreeNode* prev=NULL;
+  
     void flatten(TreeNode* root) {
-        if(root==NULL) return ;
-        flatten(root->right);
-        flatten(root->left);
-        root->right=prev;
-        root->left=NULL;
-        prev=root;
+        // if(root==NULL) return ;
+        // flatten(root->right);
+        // flatten(root->left);
+        // root->right=prev;
+        // root->left=NULL;
+        // prev=root;
+        
+        // reverese postorder vs inplace-morise
+        TreeNode* prev=NULL;
+        TreeNode* curr=root;
+        while(curr!=NULL){
+            if(curr->left!=NULL){
+               prev=curr->left;
+                while(prev->right) //finding last right
+                    prev=prev->right;
+                prev->right=curr->right;
+                curr->right=curr->left;
+                curr->left=NULL; //imp
+            }
+            curr=curr->right;
+        }
     }
 };
