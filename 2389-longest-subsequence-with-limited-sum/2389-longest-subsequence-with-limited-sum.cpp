@@ -19,3 +19,5 @@ public:
         return ans;
     }
 };
+// sort and bs on queries 
+//tc- o(nlogn+ n+ mlog m)
