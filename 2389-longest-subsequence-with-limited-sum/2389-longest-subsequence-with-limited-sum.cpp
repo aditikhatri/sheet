@@ -20,4 +20,4 @@ public:
     }
 };
 // sort and bs on queries 
-//tc- o(nlogn+ n+ mlog m)
+//tc- o(nlogn+ n+ mlog n)
