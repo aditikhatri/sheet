@@ -8,7 +8,7 @@ public:
             for(int j=i+1;j<n;j++){
                 int total=2;
                 for(int k=0;k<n;k++){
-                    if(k!=i &&k!=j){
+                    if(k!=i &&k!=j){ //equate slop and cross multiply 
                         if((p[j][1]-p[i][1])*(p[i][0]-p[k][0])==(p[i][1]-p[k][1])*(p[j][0]-p[i][0])) total++;
                     }
                 }
