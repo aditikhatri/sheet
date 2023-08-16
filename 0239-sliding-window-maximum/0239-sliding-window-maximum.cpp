@@ -8,6 +8,7 @@ public:
             while(!dq.empty() && nums[dq.back()] < nums[i])
                dq.pop_back();
             dq.push_back(i);
+            // window limit
          if(i>=k-1)ans.push_back(nums[dq.front()]);
         }
         return ans;
